@@ -1,0 +1,85 @@
+/* style.css */
+
+/* Базовые настройки шрифтов и фона */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Контейнер формы */
+form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+/* Группировка полей (вместо <br>) */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Стили заголовков (Label) */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Общие стили для полей ввода и селекта */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Чтобы padding не раздувал ширину */
+}
+
+/* Эффект при клике на поле */
+input:focus, select:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* Кнопка отправить */
+input[type="submit"] {
+    width: 100%;
+    background-color: #4A90E2;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #357ABD;
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 480px) {
+    form {
+        padding: 20px;
+        margin: 10px;
+    }
+}

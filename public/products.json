@@ -1,0 +1,130 @@
+[
+ {
+   "code": "R001C1",
+   "name": "Renault Logan"
+ },
+ {
+   "code": "R002C2",
+   "name": "Renault Logan Stepway"
+ },
+ {
+   "code": "R003C3",
+   "name": "Renault Sandero"
+ },
+ {
+   "code": "R004C4",
+   "name": "Renault Sandero Stepway"
+ },
+ {
+   "code": "R005E1",
+   "name": "K7M"
+ },
+ {
+   "code": "R006E2",
+   "name": "K4M"
+ },
+ {
+   "code": "R007E3",
+   "name": "H4M"
+ },
+ {
+   "code": "HK001C1",
+   "name": "Kia Rio"
+ },
+ {
+   "code": "HK002C2",
+   "name": "Kia Rio X-Line"
+ },
+ {
+   "code": "HK003C3",
+   "name": "Hyundai Accent"
+ },
+ {
+   "code": "HK004C4",
+   "name": "Hyundai Solaris"
+ },
+ {
+   "code": "HK005E1",
+   "name": "G4LC"
+ },
+ {
+   "code": "HK006E2",
+   "name": "G4FG"
+ },
+ {
+   "code": "VAG001C1",
+   "name": "Volkswagen Polo Sedan"
+ },
+ {
+   "code": "VAG002C2",
+   "name": "Volkswagen Polo 2021"
+ },
+ {
+   "code": "VAG003C3",
+   "name": "Skoda Rapid"
+ },
+ {
+   "code": "VAG004E1",
+   "name": "CZCA"
+ },
+ {
+   "code": "VAG005E2",
+   "name": "CFW"
+ },
+ {
+   "code": "VAG006E3",
+   "name": "CWVA"
+ },
+ {
+   "code": "VAG007E4",
+   "name": "CFNA"
+ },
+ {
+   "code": "VAG008E5",
+   "name": "CFNB"
+ },
+ {
+   "code": "L001C1",
+   "name": "Lada Vesta"
+ },
+ {
+   "code": "L002C2",
+   "name": "Lada Xray"
+ },
+ {
+   "code": "L003E1",
+   "name": "VAZ-21179"
+ },
+ {
+   "code": "L004E2",
+   "name": "VAZ-21129"
+ },
+ {
+   "code": "R008A1",
+   "name": "Carpets Renault"
+ },
+ {
+   "code": "HK007A1",
+   "name": "Carpets Hyundai"
+ },
+ {
+   "code": "HK008A2",
+   "name": "Carpets Kia"
+ },
+ {
+   "code": "VAG009A1",
+   "name": "Carpets Volkswagen"
+ },
+ {
+   "code": "VAG010A2",
+   "name": "Carpets Skoda"
+ },
+ {
+   "code": "L005A1",
+   "name": "Carpets Lada"
+ },
+ {
+   "code": "MI001A1",
+   "name": "Phone holder Xiaomi"
+ }
+]
