@@ -1,57 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web-to-Lead Form</title>
-    
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web-to-Lead Form</title>
+        
+        <link rel="stylesheet" href="style.css">
 
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    
-    <script>
-        // 2. Функция для обработки callback капчи (опционально, но полезно)
-        function timestamp() { 
-            var response = document.getElementById("g-recaptcha-response"); 
-            if (response == null || response.value.trim() == "") {
-                var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
-                elems["ts"] = JSON.stringify(new Date().getTime());
-                document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
-            } 
-        } 
-        setInterval(timestamp, 500);
+        <script src="https://www.google.com/recaptcha/api.js"></script>
 
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const productSelect = document.getElementById("00NdL00001pNCsD");
-            fetch('./products.json')
-                .then(response => {
-                    if (!response.ok) throw new Error('Ошибка загрузки JSON файла');
-                    return response.json();
-                })
-                .then(products => {
-                    products.forEach(prod => {
-                        let option = document.createElement("option");
-                        option.value = prod.code;
-                        option.text = prod.name;
-                        productSelect.appendChild(option);
-                    });
-                })
-                .catch(error => {
-                    console.error('Ошибка:', error);
-                    let option = document.createElement("option");
-                    option.text = "Ошибка загрузки списка";
-                    productSelect.appendChild(option);
-                });
-        });
-    </script>
-</head>
-<body>
+        <script src="script.js" defer></script>
 
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdL00000jm6Ft" method="POST">
+    </head>
+    <body>
+
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdL00000jm6Ft" method="POST">
+        <input type=hidden name='captcha_settings' value='{"keyname":"SF_WTL_Captcha_V3","fallback":"true","orgId":"00DdL00000jm6Ft","ts":""}'>
         <input type="hidden" name="oid" value="00DdL00000jm6Ft">
         <input type="hidden" name="retURL" value="http://google.com">
-
-        <input type="hidden" name="captcha_settings" value='{"keyname":"ВАШ_KEYNAME_ИЗ_SALESFORCE","signature":""}'>
 
         <h2 style="margin-top: 0; color: #333; text-align: center;">Contact Us</h2>
 
@@ -93,5 +59,5 @@
         <input type="submit" name="submit" value="Send Request">
     </form>
 
-</body>
+    </body>
 </html>
