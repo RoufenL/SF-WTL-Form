@@ -29,21 +29,25 @@
         <div class="form-group">
             <label for="first_name">First Name</label>
             <input id="first_name" maxlength="40" name="first_name" type="text" required />
+            <span id="fname-error" style="color:red; display:none; font-size: 12px;">Введите корректное имя (минимум 2 буквы)</span>
         </div>
 
         <div class="form-group">
             <label for="last_name">Last Name</label>
             <input id="last_name" maxlength="80" name="last_name" type="text" required />
+            <span id="lname-error" style="color:red; display:none; font-size: 12px;">Введите корректную фамилию (минимум 2 буквы)</span>
         </div>
 
         <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" maxlength="80" name="email" type="email" required />
+            <input id="email" name="email" type="email" required />
+            <span id="email-error" style="color:red; display:none;">Введите корректный email</span>
         </div>
 
         <div class="form-group">
             <label for="phone">Phone</label>
-            <input id="phone" maxlength="40" name="phone" type="tel" required />
+            <input id="phone" name="phone" type="tel" required />
+            <span id="phone-error" style="color:red; display:none;">Введите номер телефона</span>
         </div>
 
         <div class="form-group">
@@ -53,7 +57,12 @@
             </select>
         </div>
 
-        <div class="g-recaptcha" data-sitekey="6Lde3jIsAAAAAPuZRDql0b8AaJebKHTE_hj7VNYU	"></div>
+        <div class="form-group">
+            <div id="captcha-wrapper" style="display: inline-block; border: 1px solid transparent; padding: 2px;">
+                <div class="g-recaptcha" data-sitekey="6Lde3jIsAAAAAPuZRDql0b8AaJebKHTE_hj7VNYU"></div>
+            </div>
+            <span id="captcha-error" style="color:red; display:none; font-size: 12px;">Пожалуйста, пройдите проверку</span>
+        </div>
         <br>
 
         <input type="submit" name="submit" value="Send Request">
